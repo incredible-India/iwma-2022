@@ -1,0 +1,70 @@
+
+  .persons {max-width: 1240px;margin:auto;}
+  .person {
+    display:inline-block;
+    min-height: 400px;
+    margin: 2rem;
+    position: relative;
+    border: 5px solid grey;
+
+    /* border: 1px solid black; */
+  }
+  .person-badge {
+    width: 200px;
+    height: 280px;
+    overflow: hidden;
+    transform: rotate(0deg); /* To force its own layer */
+    position: relative;
+    left: 0;
+    /* border: 1px solid black; */
+  }
+  
+  
+ .person-badge img {
+
+    height: 90%;
+    width: 90%;
+    margin-left:0% i !important;
+  }
+  
+
+  .person h3 {
+    margin: 0;
+    font-weight: 200;
+    font-size: 28px;
+  }
+  
+
+  .speaker-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .name{
+    font-weight: 600;
+    color: black;
+  }
+
+  .title{
+    font-weight: 500
+  }
+
+  .handsOn{
+    text-align: center;
+    font-weight: bold;
+  }
+
+
+@media screen and (min-width : 600px) {
+    .person {
+        /* padding: 0px; */
+        padding: 70px 0 0 230px;
+        margin-left: 7rem;
+        margin-right: 7rem;
+        margin-bottom: 8rem;
+      }
+      .person-badge {
+        position: absolute;
+      }
+}
