@@ -30,6 +30,8 @@
 		<link rel="stylesheet" href="css/flaticon.css" />
 		<link rel="stylesheet" href="css/icomoon.css" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css//extraFiles/extra.css">
+		
 	</head>
 	<body>
 		<nav
@@ -125,7 +127,7 @@
 						data-scrollax=" properties: { translateY: '70%' }"
 					>
 						<h1
-							class="mb-4"
+							class="mb-4 mtop insideSpan"
 							data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
 							style="
 								color: white !important;
@@ -134,7 +136,7 @@
 							"
 						>
 							<!--   	<span style="color: aliceblue !important;">Third </span> -->
-							Fourth International Workshop
+							Fourth International International Workshop
 						</h1>
 
 						<h1
@@ -146,7 +148,7 @@
 								text-align: center;
 							"
 						>
-							on Emerging Trends in Multimedia
+							on Emerging <span class="specific">Trends</span>  in Multimedia
 						</h1>
 
 						<h1
@@ -879,12 +881,12 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<p>
-							Developers:
+							Developed By:
 							<a
 								href="https://www.linkedin.com/in/ketan-jakhar-841282191/"
 								>Ketan Jakhar</a
 							>
-							&
+							<!-- <span class="insideSpan">&</span> -->&
 							<a
 								href="https://www.linkedin.com/in/ashutosh-kumar-84365a193/"
 								>Ashutosh Kumar</a
@@ -937,5 +939,24 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 		<script src="js/google-map.js"></script>
 		<script src="js/main.js"></script>
+		<script src="./css/extraFiles/js/anime.min.js"></script>
+
+		<!-- text animation -->
+		<script>
+			let theText =  document.getElementsByClassName('insideSpan')[0];
+			theText.innerHTML = theText.textContent.replace(/\S/g,"<span>$&</span>")
+			anime.timeline({
+				loop: false,
+			})
+			.add({
+				targets: '.insideSpan span',
+				translateY : [-600,0],
+				scale :[10,1],
+				opacity :[0,1],
+				easing : 'easeOutExpo',
+				duration : 100, 
+				delay :anime.stagger(50),
+			})
+		</script>
 	</body>
 </html>

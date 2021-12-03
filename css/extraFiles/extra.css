@@ -1,0 +1,30 @@
+.mtop{
+    margin-top: 70px;
+}
+
+
+.insideSpan span
+{
+    position: relative;
+    display: inline-block;
+}
+
+::-webkit-scrollbar{
+
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    
+    background-image: linear-gradient(red,white);
+   
+      border-radius: 20px;
+  }
+
+  h1{
+      text-transform: uppercase;
+  }
+
+  .specific{
+      color: red;
+  }
